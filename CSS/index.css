@@ -1,0 +1,231 @@
+:root{
+    --darkBlue-color: #1E202B;
+    --blue-color: #009ad8;
+    --section-bg: #262936;
+    --main-card-header: #2D303D;
+    --main-card-bg: #323544;
+    --secondary-card-bg: #262936;
+    --secondary-card-header: #222530;
+    --card-text-color: #BFC1C8;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--darkBlue-color);
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+/* ================================================================== */
+
+/* Navbar */
+
+.navbar{
+    background-color: var(--darkBlue-color);
+    height: 140px;
+}
+
+.navLogo .logoImg{
+    width: 22%;
+}
+
+.navLogo .logoTitle a{
+    font-size: 1rem;
+}
+
+.navLogo .logoTitle span{
+    font-size: .625rem;
+    color: #bfc1c8;
+}
+
+.nav-item .nav-link{
+    padding-inline: 25px !important;
+    padding-block: 5px !important;
+    font-size: .875rem;
+    color: white;
+}
+
+.nav-item .nav-link.active{
+    color: var(--blue-color);
+    border: 2px solid var(--blue-color);
+    border-radius: 100vh;
+}
+
+/* ================================================================== */
+
+/* Weather Forecast */
+
+.weatherForecastBG{
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 45vh;
+}
+
+.weatherForecast .container{
+    margin-top: -16%;
+}
+
+.searchSection,
+.subscribeSection{
+    position: relative;
+}
+
+.searchSection #searchInput,
+.subscribeSection .subscribeInput{
+    background-color: var(--darkBlue-color);
+    color: white;
+    font-size: .875rem;
+    padding-inline: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.searchSection #searchInput::placeholder,
+.subscribeSection .subscribeInput::placeholder{
+    color: #757575;
+}
+
+.searchSection #searchBtn,
+.subscribeSection .subscribeBtn{
+    padding: 10px 40px;
+    background-color: var(--blue-color);
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5%;
+}
+
+.weatherDisplay .row{
+    background-color: var(--main-card-bg);
+}
+
+.weatherCard{
+    /* background-color: var(--main-card-bg); */
+    color: white;
+}
+
+.weatherCard .cardHeader{
+    background-color: var(--main-card-header);
+    padding: 10px 12px;
+}
+
+.weatherCard .cardHeader span, .cardBody h3{
+    font-size: .875rem;
+    color: var(--card-text-color);
+}
+
+.cardBody h3{
+    font-size: 1.125rem;
+    color: var(--card-text-color);
+}
+
+.cardBody .temp{
+    font-size: 5.625rem;
+    font-weight: 700;
+}
+
+.cardBody span{
+    font-size: 3.125rem;
+}
+
+.cardBody p:last-of-type{
+    font-size: 14px;
+    color: var(--blue-color);
+}
+
+.cardBody .cardIcons span{
+    font-size: 14px;
+    color: var(--card-text-color);
+}
+
+.row .eachCard:nth-child(even){
+    background-color: var(--secondary-card-bg);
+}
+
+.row .eachCard:nth-child(even) .cardHeader{
+    background-color: var(--secondary-card-header);
+}
+
+.errorMessage{
+    font-size: 1.25rem;
+}
+
+/* ================================================================== */
+
+/* Footer */
+
+footer{
+    background-color: var(--section-bg);
+}
+
+.subscribeSection{
+    width: 60%;
+}
+
+.footerSection{
+    gap: 15%;
+}
+
+.footerSection .footerIcons span{
+    display: block;
+    background-color: var(--darkBlue-color);
+    font-size: 1.125rem;
+    color: var(--blue-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    transition: 0.3s background-color, 0.3s color;
+}
+
+.footerSection .footerIcons span:hover{
+    background-color: var(--blue-color);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================== */
+
+/* media */
+
+@media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+        max-width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1170px;
+    }
+}
