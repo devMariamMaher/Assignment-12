@@ -50,8 +50,11 @@ async function getCountry(){
     navigator.geolocation.getCurrentPosition(success, error);
 }
 
-getCountry()
-// fetchTemp('cairo')
+
+(() => {
+    getCountry()
+    // fetchTemp('cairo')
+})()
 
 
 searchInput.addEventListener('input', () => {

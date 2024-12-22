@@ -26,6 +26,7 @@ img{
 .navbar{
     background-color: var(--darkBlue-color);
     height: 140px;
+    z-index: 10000;
 }
 
 .navLogo .logoImg{
@@ -39,6 +40,10 @@ img{
 .navLogo .logoTitle span{
     font-size: .625rem;
     color: #bfc1c8;
+}
+
+.navbar-nav{
+    background-color: var(--darkBlue-color);
 }
 
 .nav-item .nav-link{
