@@ -27,33 +27,33 @@ async function fetchTemp(searchQ){
 }
 
 
-async function getCountry(){
-    const success = async (pos) => {
-        let coords = pos.coords;
-        let lat = coords.latitude
-        let long = coords.longitude
+// async function getCountry(){
+//     const success = async (pos) => {
+//         let coords = pos.coords;
+//         let lat = coords.latitude
+//         let long = coords.longitude
         
-        let countryRequest = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=53f3b304f1484eff93dab34c2e52ec51`);
-        let countryResponse = await countryRequest.json();
-        let state = countryResponse.results[0].components.state;
-        fetchTemp(state);
+//         let countryRequest = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=53f3b304f1484eff93dab34c2e52ec51`);
+//         let countryResponse = await countryRequest.json();
+//         let state = countryResponse.results[0].components.state;
+//         fetchTemp(state);
 
-        errorMessage.classList.add('d-none');
-    }
+//         errorMessage.classList.add('d-none');
+//     }
     
 
-    const error = () => {
-        errorMessage.textContent = 'Location is disabled';
-        errorMessage.classList.remove('d-none');
-    }
+//     const error = () => {
+//         errorMessage.textContent = 'Location is disabled';
+//         errorMessage.classList.remove('d-none');
+//     }
     
-    navigator.geolocation.getCurrentPosition(success, error);
-}
+//     navigator.geolocation.getCurrentPosition(success, error);
+// }
 
 
 (() => {
-    getCountry()
-    // fetchTemp('cairo')
+    // getCountry()
+    fetchTemp('cairo')
 })()
 
 
